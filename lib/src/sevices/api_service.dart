@@ -34,7 +34,6 @@ class DbServices {
     try {
       final response = await http_client.post(
           Uri.parse('${Overrides.apiBaseUrl}$api'),
-          
           body: json.encode(body));
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
@@ -55,5 +54,4 @@ class DbServices {
       }
     }
   }
-
 }
